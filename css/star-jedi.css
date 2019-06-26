@@ -1,0 +1,13 @@
+/*****************************
+ All rights reserved.
+ AllFont.net (c) 2011-2015
+ *****************************/
+@font-face {
+    font-family: 'Star_Jedi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/star-wars-font.eot);
+	src: url(fonts/star-wars-font.svg) format('svg'),
+        url(fonts/star-wars-font.ttf),
+		url(fonts/star-wars-font.woff) format('woff');
+}
