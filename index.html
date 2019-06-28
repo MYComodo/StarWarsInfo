@@ -31,6 +31,8 @@
    </head>
    
    <body class="building_version" data-spy="scroll" data-target=".header">
+   
+   
       <!-- LOADER -->
       <div id="preloader">
          <img class="preloader" src="images/loaders/loader-building2.gif" alt="">
@@ -180,30 +182,26 @@
          <div class="sep1"></div>
       </div>
       <!-- end section -->
-      <div id="Characters" class="parallax section db parallax-off no-padding-bottom"  >
+      <div id="Characters" class="parallax section db parallax-off no-padding-bottom">
          <div class="container">
             <div class="row">
-               <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="message-box">
-                     <h2>Services</h2>
-                     <h5>WE ARE THE LEADERS IN THE CONSTRUCTION INDUSTRY!</h5>
+                     <h2 style="font-family: 'Star Jedi';color : yellow;">CHARACTERS</h2>
+                     <h5>THE MAIN CHARACTERS OF STAR WARS</h5>
                   </div>
                   <!-- end messagebox -->
                </div>
                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div id="charsSW" class="row">
+				  
+				  
+                     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="service-inform">
-                           <div class="icon-service">
-                              <img src="images/icon1.png" alt="#" />
-                           </div>
-                           <div class="service-inform-text">
-                              <h3>Service One</h3>
-                              <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                           </div>
+                          
                         </div>
-                     </div>
-                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                     </div> -->
+                     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="service-inform">
                            <div class="icon-service">
                               <img src="images/icon4.png" alt="#" />
@@ -213,11 +211,15 @@
                               <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                            </div>
                         </div>
-                     </div>
+                     </div> -->
+					 
+					 
                   </div>
                </div>
             </div>
-         </div>
+			</div>
+		 
+		 
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 serv" style="background-color:#222;">
@@ -259,12 +261,40 @@
      
       <!-- end footer -->
       <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-      <!-- ALL JS FILES -->
-      <script src="js/all.js"></script>
-      <!-- ALL PLUGINS -->
+	  <!-- ALL PLUGINS -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="js/all.js"></script>
       <script src="js/custom.js"></script>
       <script src="js/portfolio.js"></script>
-      <script src="js/hoverdir.js"></script>   
+      <script src="js/hoverdir.js"></script>
+	 
+	  <!-- Javascript Codes HERE  -->
+	  <script>
+		$(document).ready(function (){
+			$.ajax({
+				url: "https://swapi.co/api/people",
+				dataType: "json",
+				success: function(data){
+				
+					console.log(data.results);
+					$(data.results).each(function(index,value){
+					
+					
+					var record = "<div class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.name +"</h3> <p></p></div><div class=\"service-inform\"></div></div>";
+					$("#charsSW").append(record);
+					
+					})
+				}
+				
+			});
+		});
+	  </script>
+   
+	  
+	  <!-- ALL JS FILES -->
+      
+      
+	  
    </body>
 </html>
 
