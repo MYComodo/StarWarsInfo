@@ -213,7 +213,7 @@
 					console.log(data.results);
 					$(data.results).each(function(index,value){
 					
-					var record = "<div class=\"col-lg-3 col-md-5 col-sm-8 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.title +"</h3> <p> Director :"+value.director+"</p><p> Release Date : "+value.release_date+"</p><p> Opening Crawl : "+value.opening_crawl+"</p>";
+					var record = "<div class=\"col-lg-4 col-md-5 col-sm-8 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.title +"</h3> <p> Director :"+value.director+"</p><p> Release Date : "+value.release_date+"</p><p> Opening Crawl : "+value.opening_crawl+"</p>";
 					$("#movies").append(record);
 					
 					})
