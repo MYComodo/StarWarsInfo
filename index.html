@@ -192,7 +192,7 @@
                   </div>
                   <!-- end messagebox -->
                </div>
-               <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+               <div>
                   <div id="charsSW" class="row">
 				  
 				  
@@ -217,40 +217,10 @@
                   </div>
                </div>
             </div>
-			</div>
+		</div>
 		 
 		 
-         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="row">
-              <!--  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 serv" style="background-color:#222;">
-                  <div class="serv-blog">
-                     <img src="images/sr1.png" alt="#" />
-                  </div>
-                  <div class="serv-blog-cont">
-                     <h3>Manufacturing</h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                  </div>
-               </div> -->
-               <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 serv" style="background:#181818;">
-                  <div class="serv-blog">
-                     <img src="images/sr2.png" alt="#" />
-                  </div>
-                  <div class="serv-blog-cont">
-                     <h3>Fabrication</h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                  </div>
-               </div> -->
-               <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 serv" style="background:#222;">
-                  <div class="serv-blog">
-                     <img src="images/sr3.png" alt="#" />
-                  </div>
-                  <div class="serv-blog-cont">
-                     <h3>Construction</h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                  </div>
-               </div> -->
-            </div>
-         </div>
+         
       </div>
       <!-- end section -->
       
@@ -280,7 +250,7 @@
 					$(data.results).each(function(index,value){
 					
 					
-					var record = "<div class=\"col-lg-5 col-md-6 col-sm-8 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.name +"</h3> <p> Birth Year :"+value.birthyear+"</p><p> Skin Color : "+value.skin_color+"</p><p> Gender : "+value.gender+"</p><p> Height : "+value.height+"</p></div><div class=\"service-inform\"></div></div>";
+					var record = "<div class=\"col-lg-3 col-md-5 col-sm-8 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.name +"</h3> <p> Birth Year :"+value.birthyear+"</p><p> Skin Color : "+value.skin_color+"</p><p> Gender : "+value.gender+"</p><p> Height : "+value.height+"</p></div><div class=\"service-inform\"></div></div>";
 					$("#charsSW").append(record);
 					
 					})
