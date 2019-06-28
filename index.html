@@ -127,48 +127,17 @@
               
             </div>
             <!-- end row -->
-            <div class="row text-center about-row">
-               <div class="col-md-4 col-sm-12 col-xs-12">
+            <div id="movies">
+              
+              
+               <!-- <div class="col-md-4 col-sm-12 col-xs-12">
                   <div class="row">
                      <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_01.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>Spacious and Large Garden</h3>
-                        <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
-                     </div>
-                     <!-- end service -->
+                      
+					 </div>
                   </div>
-               </div>
-               <div class="col-md-4 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_02.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>With its Own Pool</h3>
-                        <p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
-                     </div>
-                     <!-- end service -->
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_03.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>In Forests- Fresh Clean Air</h3>
-                        <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                     </div>
-                     <!-- end service -->
-                  </div>
-               </div>
+               </div> -->
             </div>
-            <!-- end row -->
          </div>
          <!-- end container -->
          <div class="sep1"></div>
@@ -242,12 +211,12 @@
 				success: function(data){
 					
 					console.log(data.results);
-					$(data.results).each(function(index,value)){
+					$(data.results).each(function(index,value){
 					
 					var record = "<div class=\"col-lg-3 col-md-5 col-sm-8 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.title +"</h3> <p> Director :"+value.director+"</p><p> Release Date : "+value.release_date+"</p><p> Opening Crawl : "+value.opening_crawl+"</p>";
-					$("#charsSW").append(record);
+					$("#movies").append(record);
 					
-					}
+					})
 				}
 			});
 		});
