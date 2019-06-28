@@ -280,7 +280,7 @@
 					$(data.results).each(function(index,value){
 					
 					
-					var record = "<div class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.name +"</h3> <p></p><p></p><p></p><p></p></div><div class=\"service-inform\"></div></div>";
+					var record = "<div class=\"col-lg-5 col-md-6 col-sm-8 col-xs-12\"><div id=\"\" class=\"service-inform-text\"> <h3>"+ (index+1) +". "+ value.name +"</h3> <p> Birth Year :"+value.birthyear+"</p><p> Skin Color : "+value.skin_color+"</p><p> Gender : "+value.gender+"</p><p> Height : "+value.height+"</p></div><div class=\"service-inform\"></div></div>";
 					$("#charsSW").append(record);
 					
 					})
